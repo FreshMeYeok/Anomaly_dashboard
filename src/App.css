@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Yeon+Sung&display=swap");
+
+body {
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Yeon Sung";
+  /* min-height: 100vh; */
+  margin: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* @media (min-width: 650px) {
+  .App {
+    width: 640px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
+@media (max-width: 650px) {
+  .App {
+    width: 90vw;
+  }
+} */
+
+#root {
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.App {
   min-height: 100vh;
+  padding-left: auto;
+  padding-right: auto;
+}
+
+/* header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: auto;
+  padding-right: auto;
+
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-bottom: 1px solid #e2e2e2;
 }
 
-.App-link {
-  color: #61dafb;
+header > div {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header .head_text {
+  width: 50%;
+  font-size: 25px;
+  justify-content: center;
+}
+
+header .head_btn_left {
+  margin-left: 100px;
+  width: 25%;
+  justify-content: start;
+}
+
+header .head_btn_right {
+  width: 25%;
+  justify-content: end;
+  margin-right: 100px;
+}
+
+header button {
+  font-family: "Yeon Sung";
+} */
+
+.App_Chart {
+  /* width: 80%; */
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.Home {
+  /* width: 100vh; 세로 방향 뷰포트 크기를 가로 크기로 설정 */
+  /* height: 100vw; 가로 방향 뷰포트 크기를 세로 크기로 설정 */
+  /* overflow: hidden; 스크롤 막기 */
+  /* transform-origin: top left; 회전 축 설정 */
+  /* transform: rotate(-90deg); */
+  width: 100vw;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+  /* height: 100vh; */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.DashCamView .WebCamComponent {
+  width: 600px;
+  /* height: 70%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.WebCamComponent .video {
+  /* width: 80%; */
+  /* height: 100%; */
+  justify-content: center;
+  object-fit: cover;
+  margin-right: 100000px;
+}
+
+.WebcamComponent button {
+  border: none;
+  border-radius: 5px;
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+.RandomValueView h1 {
+  font-size: 70px;
+  display: flex;
+}
+
+.AnomalyScore_view h1 {
+  justify-content: center;
 }
