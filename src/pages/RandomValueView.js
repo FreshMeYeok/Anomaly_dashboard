@@ -4,7 +4,7 @@ const RandomValueView = ({ value }) => {
   return (
     <div className="RandomValueView">
       <h1>Anomaly</h1>
-      <div className="AnomalyScore_view">
+      <div className="Anomaly">
         <h1>{value}</h1>
       </div>
     </div>
