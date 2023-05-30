@@ -109,10 +109,12 @@ const SmallChart = ({ video_url }) => {
   return (
     <div>
       <RandomValueView value={anomalyProbabilities[0]} />
-      <div className="App_Chart">
+      <div className="App_Chart" onClick={handlePlay}>
         <canvas ref={chartRef} width="200" height="100"></canvas>
       </div>
-      <button onClick={handlePlay}>Play</button>
+      {/* <button onClick={handlePlay}>
+        <h4>Play</h4>
+      </button> */}
     </div>
   );
 };

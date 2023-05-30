@@ -11,17 +11,6 @@ body {
   margin: 0px;
 }
 
-/* @media (min-width: 650px) {
-  .App {
-    width: 640px;
-  }
-}
-
-@media (max-width: 650px) {
-  .App {
-    width: 90vw;
-  }
-} */
 input {
   border: none;
 }
@@ -29,10 +18,12 @@ input {
 #root {
   background-color: white;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  min-height: 100vh;
+  max-height: 100vh;
 }
 
 .App {
-  min-height: 100vh;
+  max-height: 100vh;
   padding-left: auto;
   padding-right: auto;
 }
@@ -42,6 +33,10 @@ input {
   margin-top: 30px;
   margin-bottom: 30px;
   text-align: center;
+}
+
+.App .App_title {
+  font-size: 100px;
 }
 
 .Anomaly_true h1 {
@@ -56,59 +51,54 @@ input {
   /* width: 80%; */
   display: flex;
   justify-content: center;
-  height: 500px;
-  margin-left: 40px;
-  margin-right: 40px;
+  height: 460px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
 }
 
 .Home {
-  /* width: 100vh; 세로 방향 뷰포트 크기를 가로 크기로 설정 */
-  /* height: 100vw; 가로 방향 뷰포트 크기를 세로 크기로 설정 */
-  /* overflow: hidden; 스크롤 막기 */
-  /* transform-origin: top left; 회전 축 설정 */
-  /* transform: rotate(-90deg); */
   width: 100vw;
   height: 50%;
   display: flex;
   justify-content: center;
-  /* flex-direction: column; */
-  /* height: 100vh; */
   overflow: hidden;
   display: flex;
   justify-content: center;
 }
 
-.DashCamView .WebCamComponent {
-  width: 40vw;
+.DashCamView {
+  /* width: 40vw; */
   /* height: 70%; */
   display: flex;
   justify-content: center;
   align-items: center;
   /* overflow: hidden; */
-  margin-top: 30px;
+  /* margin-top: 30px;
   margin-left: 40px;
   margin-right: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 30px; */
 }
 
-.WebCamComponent .video {
-  /* width: 80%; */
-  /* height: 100%; */
+.realtime_detect {
   justify-content: center;
-  object-fit: cover;
-  /* margin-right: 100000px; */
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  align-items: center;
 }
 
 .WebcamComponent button {
   border: none;
   border-radius: 5px;
-  margin-left: 40px;
   cursor: pointer;
 }
 
-.RandomValueView h1 {
+.RandomValueView {
   font-size: 70px;
   display: flex;
+  justify-content: center;
 }
 
 .AnomalyScore_view h1 {
@@ -117,4 +107,62 @@ input {
 
 .VideoPlayer video {
   width: 40vw;
+}
+
+.Anomaly_score {
+  padding-right: 3em;
+}
+
+.VideoUploader {
+  justify-content: center;
+}
+
+.VideoUploader .input_form {
+  justify-content: center;
+  display: flex;
+}
+
+.VideoPlayer {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.VideoPlayer .react_video video {
+  justify-content: center;
+}
+
+.recorded_video {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.recorded_video button {
+}
+
+.btn_realtime_no {
+  background-color: #fd565f;
+  color: white;
+  margin-top: 10px;
+}
+
+.btn_realtime_yes {
+  background-color: #64c964;
+  color: white;
+  margin-top: 10px;
+}
+
+.button_upload {
+  background-color: black;
+  color: white;
+}
+
+.App_title {
+  color: red;
+}
+
+.Title {
+  justify-content: center;
+  display: flex;
 }

@@ -107,8 +107,9 @@ const VideoPlayer = ({ video_url }) => {
   };
 
   return (
-    <div>
+    <div className="VideoPlayer">
       <ReactPlayer
+        className="react_video"
         url={video_url}
         controls
         playing={isPlaying}
@@ -117,7 +118,7 @@ const VideoPlayer = ({ video_url }) => {
       />
       <RandomValueView value={anomalyProbabilities[0]} />
       <div className="App_Chart">
-        <canvas ref={chartRef} width="200" height="100"></canvas>
+        <canvas ref={chartRef} width="640" height="360"></canvas>
       </div>
     </div>
   );

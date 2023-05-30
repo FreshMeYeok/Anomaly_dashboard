@@ -42,16 +42,17 @@ const VideoUploader = () => {
 
   return (
     <div className="VideoUploader">
-      <input type="file" accept="video/*" onChange={handleFileChange} />
-      <button onClick={handleUpload}>Upload</button>
+      <div className="input_form">
+        <input type="file" accept="video/*" onChange={handleFileChange} />
+        <button className="button_upload" onClick={handleUpload}>
+          Upload
+        </button>
+      </div>
+      <>
+        {loading && <div>Loading...</div>}
 
-      {loading && <div>Loading...</div>}
-
-      {videoUrl && (
-        <div className="VideoPlayer">
-          <VideoPlayer video_url={videoUrl} />
-        </div>
-      )}
+        {videoUrl && <VideoPlayer video_url={videoUrl} />}
+      </>
     </div>
   );
 };

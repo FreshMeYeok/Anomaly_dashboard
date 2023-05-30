@@ -60,19 +60,25 @@ const WebcamComponent = ({ width, height }) => {
       <>
         {cameraOn ? (
           <>
-            <button onClick={handleToggleCamera}>
-              "실시간 탐지 모드 사용 종료"
-            </button>
-            <video ref={videoRef} className="WebCamComponent video" autoPlay />
+            <div className="realtime_detect">
+              <video
+                ref={videoRef}
+                className="WebCamComponent_video"
+                autoPlay
+              />
+              <button className="btn_realtime_no" onClick={handleToggleCamera}>
+                <h4>실시간 탐지 모드 사용 종료</h4>
+              </button>
+            </div>
             <SmallChart />
           </>
         ) : (
-          <>
+          <div className="recorded_video">
             <VideoUploader />
-            <button onClick={handleToggleCamera}>
-              "실시간 탐지 모드 사용"
+            <button className="btn_realtime_yes" onClick={handleToggleCamera}>
+              <h4>실시간 탐지 모드 사용</h4>
             </button>
-          </>
+          </div>
         )}
       </>
       {/* <VideoPlayer video_url={"http://localhost:8888/download/test2.mp4"} /> */}
