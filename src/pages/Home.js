@@ -6,7 +6,7 @@ const Home = ({ anomaly_value }) => {
   return (
     <div className="Home">
       <DashCamView />
-      <RandomValueView value={anomaly_value} />
+      {/* <RandomValueView value={anomaly_value} /> */}
     </div>
   );
 };

@@ -27,7 +27,7 @@ const VideoUploader = () => {
           console.log(response.data.anomaly_probabilities);
           localStorage.setItem(
             "anomaly_probabilities",
-            JSON.stringify(response.data.anomaly_probabilities)
+            JSON.parse(JSON.stringify(response.data.anomaly_probabilities))
           );
         })
         .catch((error) => {

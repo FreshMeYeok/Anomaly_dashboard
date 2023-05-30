@@ -90,9 +90,9 @@ const ChartComponent = () => {
     <>
       <Home anomaly_value={value} />
 
-      <button onClick={handleButtonClick}>
+      {/* <button onClick={handleButtonClick}>
         {sendValues ? "Stop Sending Values" : "Start Sending Values"}
-      </button>
+      </button> */}
     </>
   );
 };

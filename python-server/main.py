@@ -8,6 +8,8 @@ import os
 from flask_cors import CORS
 import numpy as np
 from flask import jsonify
+# from load_model import load_model
+
 
 
 app = Flask(__name__)
@@ -72,9 +74,9 @@ def upload():
 
         # 모델을 통과하여 각 초에서의 이상탐지 확률 리스트를 얻어옴
     # anomaly_probabilities = model.predict(video_path)
-        anomaly_probabilities = [74, 64, 52, 28, 12, 97, 11, 54, 59, 46, 47, 9, 70, 2, 50, 16, 12, 14, 29, 41, 23, 39, 75, 62, 64, 84, 30, 12, 95, 62, 51, 59, 26, 87, 73, 88, 88, 61, 39, 91, 19, 22, 52, 82, 41, 94, 31,
-                                 40, 9, 79, 23, 99, 90, 32, 7, 97, 68, 34, 74, 71, 76, 10, 74, 23, 96, 60, 37, 48, 87, 49, 71, 4, 11, 44, 71, 71, 33, 5, 85, 99, 93, 98, 64, 28, 29, 43, 17, 40, 99, 78, 19, 2, 44, 6, 19, 28, 80, 46, 57, 58]
-
+        print("anomaly_probabilities 계산 중")
+        anomaly_probabilities = load_model.cal_anomaly_probability(filename)
+        print("anomaly_probabilities 계산 완료")
     # 각 초에서의 이상탐지 확률 리스트를 클라이언트에게 전송
     # for probability in anomaly_probabilities:
     #     print("출력중")

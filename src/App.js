@@ -76,7 +76,8 @@ import ChartComponent from "./pages/ChartComponent";
 
 const App = () => {
   return (
-    <div>
+    <div className="App">
+      <h1>Drive Safe</h1>
       {/* <Home anomaly_value={value} /> */}
       {/* <div className="App_Chart">
         <canvas ref={chartRef} width="200" height="100"></canvas>

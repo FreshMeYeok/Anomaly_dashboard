@@ -5,7 +5,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Yeon Sung";
+  /* font-family: "Yeon Sung"; */
+  font-family: "Consolas";
   /* min-height: 100vh; */
   margin: 0px;
 }
@@ -21,6 +22,9 @@ body {
     width: 90vw;
   }
 } */
+input {
+  border: none;
+}
 
 #root {
   background-color: white;
@@ -33,43 +37,20 @@ body {
   padding-right: auto;
 }
 
-/* header {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: auto;
-  padding-right: auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid #e2e2e2;
+.App h1 {
+  font-size: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
-header > div {
-  display: flex;
+.Anomaly_true h1 {
+  color: red;
 }
 
-header .head_text {
-  width: 50%;
-  font-size: 25px;
-  justify-content: center;
+.Anomaly h1 {
+  color: blue;
 }
-
-header .head_btn_left {
-  margin-left: 100px;
-  width: 25%;
-  justify-content: start;
-}
-
-header .head_btn_right {
-  width: 25%;
-  justify-content: end;
-  margin-right: 100px;
-}
-
-header button {
-  font-family: "Yeon Sung";
-} */
 
 .App_Chart {
   /* width: 80%; */

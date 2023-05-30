@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import VideoUploader from "./ViedoUploader";
 import VideoPlayer from "./VideoPlayer";
+import SmallChart from "./SmallChart";
 
 const WebcamComponent = ({ width, height }) => {
   const videoRef = useRef(null);
@@ -63,6 +64,7 @@ const WebcamComponent = ({ width, height }) => {
               "실시간 탐지 모드 사용 종료"
             </button>
             <video ref={videoRef} className="WebCamComponent video" autoPlay />
+            <SmallChart />
           </>
         ) : (
           <>

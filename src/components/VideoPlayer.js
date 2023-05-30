@@ -1,6 +1,8 @@
 import ReactPlayer from "react-player";
 import Chart from "chart.js/auto";
 import React, { useEffect, useState, useRef } from "react";
+import DashCamView from "../pages/DashCamView";
+import RandomValueView from "../pages/RandomValueView";
 
 const VideoPlayer = ({ video_url }) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -67,6 +69,8 @@ const VideoPlayer = ({ video_url }) => {
         }
         chart.data.labels.push(currentTime.toFixed(1)); // Add current time
         chart.data.datasets[0].data.push(anomalyProbabilities[0]);
+        console.log(anomalyProbabilities);
+        console.log(anomalyProbabilities[0]);
         chart.update();
         setAnomalyProbabilities((prevProbabilities) =>
           prevProbabilities.slice(1)
@@ -111,6 +115,7 @@ const VideoPlayer = ({ video_url }) => {
         onPlay={handlePlay}
         onPause={handlePause}
       />
+      <RandomValueView value={anomalyProbabilities[0]} />
       <div className="App_Chart">
         <canvas ref={chartRef} width="200" height="100"></canvas>
       </div>
